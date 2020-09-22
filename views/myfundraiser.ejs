@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+
+
+  <title></title>
+</head>
+
+<body>
+  <header>
+    <h2>My fundraisers</h2>
+  </header>
+  <!-- to show all fundraisers -->
+  <h2><%=greeting%></h2>
+<section class="fund">
+
+
+  <form action="fundRaiser" method="post">
+    <section class="formInput">
+
+    <input type="number" name="fund" value="" required>
+    <!-- <input type="text" name="" value=""   required> -->
+    <button type="submit">Submit</button>
+
+    </section>
+    <% for (var i=0; i<result.length; i++) { %>
+    <div class="card" style="width: 18rem;">
+      <img src="/img/red.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <span><%=result[i].fund%></span>
+        <p class="card-text">Thank you for your donation</p>
+        <button type="button" class="deleteButton" value="<%=result[i]._id%>">Delete</button>
+
+      </div>
+    </div>
+    <!-- <span><%=result[i].fund%></span> -->
+
+    <!-- <button type="button" class="deleteButton" value="<%=result[i]._id%>">Delete</button> -->
+
+    <%}%>
+
+         </form>
+         </section>
+         <script type="text/javascript"  src="delete.js"></script>
+  </body>
+</html>
