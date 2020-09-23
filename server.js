@@ -1,12 +1,12 @@
 // server.js
-var hellotest
+
 // set up ======================================================================
 // get all the tools we need
 var express  = require('express');
 var app      = express();
 // process.env.PORT MEANS WHATEVER IS IN THE ENVIRONMENT VARIABLE
 // and right I need that for when I'm deploying otherwise it's a nono
-var port     = process.env.PORT || 8190 ;
+var port     = process.env.PORT || 8290 ;
 
 const MongoClient = require('mongodb').MongoClient
 // the only reason we are able to use mongoose is because it's in the node_modules

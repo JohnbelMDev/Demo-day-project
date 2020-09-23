@@ -63,6 +63,11 @@ module.exports = function(app,passport, db) {
         });
     });
 
+  app.get('/campaignprofile', (req,res) =>{
+          res.render("campaignprofile.ejs")
+
+  })
+
    app.delete('/deleteDonation',(req,responce) =>{
 console.log(req.body.id);
      db.collection('donation').findOneAndDelete({
@@ -112,6 +117,23 @@ console.log(req.body.id);
 
   });
 
+  app.post('/campaignSubmmision',(req,res)=>{
+    let num1 = req.body.num1
+    let num2 = req.body.num2
+    let num3 = req.body.num3
+    let num4= req.body.num4
+
+    res.redirect("/campaignprofile")
+    // res.send(num1 + "" + num2 + "" + num3 + "" + num4)
+    // res.send(num2)
+    // res.send(num3)
+    // res.send(num4)
+
+
+
+
+  });
+
 
   // app.get()
     // LOGOUT ==============================
@@ -155,15 +177,15 @@ console.log(req.body.id);
   // an example of this would be
   // get is like a question
     app.get('/courselist', (req, res) => {
-      db.collection('list').find({name:'johnbel@gmail.com'}).toArray((err,result) =>{
-        if (err) return console.log(err)
-        console.log(result);
-        // rendering the page
-        // I'm responding back with rendering the course.ejs
-        // and render is the answer
-        res.render('course.ejs', {'showclass':result})
-      })
-
+      // db.collection('list').find({name:'johnbel@gmail.com'}).toArray((err,result) =>{
+      //   if (err) return console.log(err)
+      //   console.log(result);
+      //   // rendering the page
+      //   // I'm responding back with rendering the course.ejs
+      //   // and render is the answer
+      //   res.render('course.ejs', {'showclass':result})
+      // })
+res.send("hello")
     })
     // using put for updating data
     app.put('/messages', (req, res) => {

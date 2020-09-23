@@ -1,7 +1,7 @@
 body{
   padding-top:80px;
   word-wrap:break-word;
-  /* background-color: black; */
+  background-color: black;
 }
 h1,p,a,span{
   color: white;
