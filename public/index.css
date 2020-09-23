@@ -1,7 +1,7 @@
 body{
   padding-top:80px;
   word-wrap:break-word;
-  background-color: black;
+  background-color: white;
 }
 h1,p,a,span{
   color: white;
@@ -38,5 +38,5 @@ input{
   margin-left: 50%;
 }
 .test{
-  background-image: url('https://www.pulitzer.org/cms/sites/default/files/styles/slider_large/public/2009haiti19.jpg')!important;
+  background-image: url('https://www.ardehali.art/images/articles/ArunaBhat.jpg')!important;
 }
