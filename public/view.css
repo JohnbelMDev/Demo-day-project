@@ -1,0 +1,15 @@
+.card{
+width: 40%!important;
+background: rgba(0,0,0,0.5);
+margin-left:30%;
+}
+p{
+  background: rgba(0,0,0,0.5);
+
+}
+
+body{
+  background-image: url('https://www.usaid.gov/sites/default/files/styles/732_width/public/nodeimage/Nadia_Todres_Education.jpg?itok=dVZvKrfU');
+   background-repeat: no-repeat;
+   background-size: cover;
+}

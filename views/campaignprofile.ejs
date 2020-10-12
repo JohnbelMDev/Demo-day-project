@@ -11,18 +11,41 @@
 <header>
   <h2>My Raises</h2>
 </header>
+    <a class="logout" href="/logout">Logout</a>
     <section class="topcontainer">
       <section class="child">
         <div class="card" style="width: 18rem;">
         <img src="img/hands.jpg" class="card-img-top" alt="...">
+
         <div class="card-body">
-          <!-- <h5 class="card-title">Card title</h5> -->
-          <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-          <a href="#" id="card" class="btn btn-primary">Start a new fundraiser</a>
+          <a href="/campaignform"  class="btn btn-primary">Start a new fundraiser</a>
         </div>
+
+
       </div>
+      <% for(var i=0;i<answer.length;i++){ %>
+        <div  class="test">
+        <img src="img/img02.jpg" class="card-img-top" alt="...">
+
+        <div class="card-body">
+          <h3><%=answer[i].user%></h3>
+          <h4><%=answer[i].description%></h4>
+          <h4>Amount Raise: <%=answer[i].currentGoal%>$</h4>
+
+          <!-- <input type="hidden" name="result" value="<%=answer._id%>"> -->
+
+          <button  value="<%=answer[i]._id%>" id="card" class="btn btn-primary deleteButton">Delete Fundraiser</button>
+        </div>
+
+
+      </div>
+
+      <%}%>
     </section>
 
     </section>
+    <script type="text/javascript" src="/main.js">
+
+    </script>
   </body>
 </html>

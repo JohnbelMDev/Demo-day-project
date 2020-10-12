@@ -1,12 +1,13 @@
 // server.js
-
+// const key ='sk_test_51Ha6EUEsCFPlCMG1zxzWoFCMCkMdTEEnxmtsY54cDJ1ZCMebV8NwxX9V9IFrDojB0nhtXTdhk1EVVD1KDiUUPi9g00gVqMcbFl';
+// const stripe = require('stripe')(key);
 // set up ======================================================================
 // get all the tools we need
 var express  = require('express');
 var app      = express();
 // process.env.PORT MEANS WHATEVER IS IN THE ENVIRONMENT VARIABLE
 // and right I need that for when I'm deploying otherwise it's a nono
-var port     = process.env.PORT || 8290 ;
+var port     = process.env.PORT || 8180 ;
 
 const MongoClient = require('mongodb').MongoClient
 // the only reason we are able to use mongoose is because it's in the node_modules
@@ -15,6 +16,7 @@ const MongoClient = require('mongodb').MongoClient
 var mongoose = require('mongoose');
 var passport = require('passport');
 var flash    = require('connect-flash');
+// const multer = require('multer');
 
 var morgan       = require('morgan');
 var cookieParser = require('cookie-parser');
@@ -67,7 +69,7 @@ app.use(flash()); // use connect-flash for flash messages stored in session
 
 
 // routes ======================================================================
-// require('./app/routes.js')(app, passport, db); // load our routes and pass in our app and fully configured passport
+// require('./app/routes.js')(app, passport, db,multer); // load our routes and pass in our app and fully configured passport
 
 // launch ======================================================================
 // listening to the port

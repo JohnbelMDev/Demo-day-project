@@ -1,22 +1,27 @@
 .form-group{
-  width: 50%;
+  width: 40%;
   margin-left: 29%;
   margin-bottom: 5%;
   margin-top: 5%;
 
 }
-
+.color{
+  color: white;
+}
 .childContainer{
   padding-top: 4%;
 }
+p{
+  color: white;
+}
 .container{
-  width:90%;
-  height: 32rem;
-  background-color: green;
+  width:80%;
+  height: 62rem;
+  background-color: blue;
 }
 h2{
   text-align: center;
-  color:green;
+  color:red;
 }
 input{
   display: block;
