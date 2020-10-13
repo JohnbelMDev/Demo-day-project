@@ -1,6 +1,6 @@
 const stripe = Stripe('pk_test_51Ha6EUEsCFPlCMG13YMA2jlqYopE1NnrRpMeZWJYOQM6JuU5KWWq5NqtoDSwtJQ8lKi1Xq5nnB9SYOAR5Jb9pqDp00kPG7meQM'); // Your Publishable Key
 const elements = stripe.elements();
-alert("hi")
+
 
 // Create our card inputs
 var style = {

@@ -5,8 +5,26 @@ footer {
   background-color: #0C2340;
   color:white;
 }
+
+
+
+/* .header {
+
+  position: fixed;
+	z-index: 1000;
+	height: 100px;
+  width: 100%;
+	background: rgba(34,34,34,0.25);
+	padding: 18px;
+	-webkit-transition: all ease-out .5s;
+  -moz-transition: all ease-out .5s;
+  -o-transition: all ease-out .5s;
+  transition: all ease-out .5s;
+} */
+
+
 .Promise{
-  color:white;
+  color:blue;
 }
 .imgLogo{
   color: blue;
@@ -27,10 +45,17 @@ body{
 .color{
   background-color: transparent !important;
 }
+
 header{
+
   /* border: 2px solid black; */
  padding: 25px;
- background-image: url('https://loeildelaphotographie.com/wp-content/uploads/2018/11/KS1.jpg');
+ background: rgba(34,34,34,0.25);
+ -webkit-transition: all ease-out .5s;
+ -moz-transition: all ease-out .5s;
+ -o-transition: all ease-out .5s;
+ transition: all ease-out .5s;
+ background-image: url('https://www.digicelgroup.com/en/media/news/2018/march/21/digicel-fulfils-promise-to-haiti-with-175th-school/_jcr_content/content/two_columns_content/left-parsys/image_0.img.jpg/1552525893740.jpg');
  background-repeat: no-repeat;
  /* background-size: auto; */
  background-size: cover;
@@ -38,11 +63,15 @@ header{
   /* background-image: url('https://www.borgenmagazine.com/wp-content/uploads/2017/07/35119694146_3e5db64073_k.jpg');; */
   height:44em;
 }
+.margintest{
+  margin-bottom: 0;
+}
 h1,a,span{
   color: black;
 }
 .card{
-  border:1px solid red;
+  border:1px solid white;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 label{
   color:black;
@@ -59,9 +88,9 @@ img{
 h2{
   text-align: center;
 }
-.margin{
+/* .margin{
       margin-right: 41px;
-}
+} */
 /* .margin:hover{
     background-color: red;
     border:1px solid blue;
@@ -69,8 +98,18 @@ h2{
 .test2{
   color: white;
 }
+
+.space{
+  margin:4% 1px 0px 3px
+}
 input{
   display: block;
+}
+.jumbotron{
+  background-color: white;
+}
+.testColor{
+  color:red!important;
 }
 .card{
   display: inline-block;
