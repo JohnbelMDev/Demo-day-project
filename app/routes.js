@@ -152,6 +152,19 @@ res.redirect('/')
 
 
   app.get('/campaignprofile', (req, res) => {
+    var today = new Date();
+    var hourNow = today.getHours();
+    var greeting;
+    if (hourNow > 18) {
+      greeting = 'Good evening'
+    } else if (hourNow > 12) {
+      greeting = 'Good afternoon'
+
+    } else if (hourNow > 0) {
+      greeting = 'Good morning'
+    } else {
+      greeting = 'Welcome';
+    }
 
     fundModel.find({
         user: req.user.local.email
@@ -160,7 +173,8 @@ res.redirect('/')
         // console.log(result);
         // console.log("hello I am",result);
         res.render('campaignprofile.ejs', {
-          answer: result
+          answer: result,
+          greeting:greeting
         });
 
       });
@@ -249,7 +263,7 @@ res.redirect('/')
                 customer: customer.id
               })
             )
-            .then(() => res.redirect('completed'))
+            .then(() => res.redirect('/'))
             .catch(err => {console.log(err);
                 console.log(err);
             })
@@ -284,7 +298,7 @@ res.redirect('/')
 
 
   app.post('/submission', upload.single('file-to-upload'), (req, res, next) => {
-    let fullName = req.user.local.email
+    let email = req.user.local.email
     let title = req.body.title;
     let description = req.body.description;
     let amount = parseInt(req.body.amount); //parsing the number to have the databse collection name as a number
@@ -292,7 +306,7 @@ res.redirect('/')
     let category = req.body.category;
     let itemsTodonate = req.body.itemsTodonate;
     let homeAddress = req.body.homeAddress;
-
+    let name = req.body.name;
 
 
     // let itemsTodonate = req.body.date;
@@ -311,7 +325,8 @@ res.redirect('/')
     // creating an object
     let fund = new fundModel({
       _id: new mongoose.Types.ObjectId(),
-      user: fullName,
+      user: email,
+      name:name,
       imgPath: 'images/uploads/' + req.file.filename,
       amount: amount,
       currentGoal: 0,

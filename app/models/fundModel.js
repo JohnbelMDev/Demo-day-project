@@ -9,7 +9,7 @@ var fundSchema = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
   // user with the value of string
     user:String,
-
+    name:String,
     fullName:String,
     // amount with the value of number
     amount:Number,
