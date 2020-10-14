@@ -6,6 +6,15 @@
   margin: 2% 5% 5% 6%;
 
 }
+.imageFund{
+  height: 13rem;
+  margin: 0 0 0 20%;
+
+}
+.hover:hover{
+  background-color: yellow;
+
+}
 #greeting{
   margin-left: 40%;
 }
@@ -27,8 +36,8 @@
 .topcontainer{
   /* height: 23rem; */
   background-color: #D3D3D3	;
-  margin-top: 10%;
-  height: 32rem;
+  /* margin-top: 10%; */
+  /* height: 32rem; */
 }
 .child{
   padding-top: 2%;
@@ -46,7 +55,7 @@ li{
 }
 .test{
 margin:0 3% 0 0;
-width:18rem;
+width:20rem;
 display: inline-block;
 box-shadow: 2px 4px 2px 2px rgba(0, 0, 0, 0.2), 0 16px 20px 0 rgba(1, 11, 2, 1.99);
 background-color: white;

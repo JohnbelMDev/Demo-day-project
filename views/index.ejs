@@ -129,13 +129,14 @@
 
       <% for(var i=0; i<answer.length;i++) {%>
         <div class="col-md-4">
-          <div class="card" style="width: 18rem;">
+          <div class="card" style="width: 19rem;">
             <img srcset="<%=answer[i].imgPath%>" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title"><%=answer[i].title%></h5>
               <h5 class="card-title"></h5>
-              <p class="card-text black"><%=answer[i].user%> is organizing this fundraiser</p>
-              <p class="card-text black">$<%=answer[i].amount%></p>
+              <p class="card-text black"><%=answer[i].name%> is organizing this fundraiser</p>
+              <p class="card-text black">Email <%=answer[i].user%> for more info</p>
+              <p class="card-text black">Help <%=answer[i].name%> Raise  $<%=answer[i].amount%></p>
               <p class="card-text black"><%=answer[i].date%></p>
               <!-- <p class="card-text"><%=answer[i].description%></p>
               <p class="card-text"><%=answer[i].description%></p> -->
