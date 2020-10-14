@@ -3,11 +3,53 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+
 <link rel="stylesheet" href="/view.css">
   </head>
   <body>
 
+
+    <header>
+
+      <!--Main Navigation-->
+
+      <nav class="navbar fixed-top navbar-expand-lg navbar-dark indigo "  id="navbar">
+          <!-- <a class="navbar-brand right" href="#"><strong>Navbar</strong></a> -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                  <!-- <li class="nav-item active">
+                      <a class="nav-link testColor" href="#">Home <span class="sr-only">(current)</span></a>
+                  </li> -->
+                  <li class="nav-item">
+                                   </li>
+                  <!-- <li class="nav-item">
+                    <a class="nav-link active" href="/login">Login</a>
+                  </li> -->
+              </ul>
+              <div class="form-inline my-2 my-lg-0">
+                <a href="/"><button class="btn btn-outline-danger my-2 my-sm-0 margin left" >Home</button></a>
+                <a href="/signup">  <button class="btn btn-outline-primary my-2 my-sm-0 margin left">Signup</button></a>
+      </div>
+          </div>
+      </nav>
+        <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+     <a href="/login"><button class="btn btn-outline-danger my-2 my-sm-0 margin" >Login</button></a>
+     <a href="/signup">  <button class="btn btn-outline-primary my-2 my-sm-0 margin">Signup</button> -->
+
+
+  </header>
+<!--
     <div class="card" style="width: 18rem;">
       <img class="card-img-top" src="..." alt="Card image cap">
       <div class="card-body">
@@ -23,12 +65,12 @@
         <a href="#" class="card-link">Card link</a>
         <a href="#" class="card-link">Another link</a>
       </div>
-    </div>
+    </div> -->
 
 
 
 
-    <!-- <div class="card mb-3 card">
+     <div class="card mb-3 card">
 
      <% for(var i=0; i< viewDonation.donation.length;i++){%>
       <p class="list-group-item"><%=viewDonation.donation[i].fullName%></p>
@@ -43,8 +85,59 @@
 
      <p class="list-group-item">Amount Raised <%=viewDonation.currentGoal%> out of<span>  <%=viewDonation.amount%></span></p>
 
-</div> -->
+</div>
 
+
+
+
+<footer class="page-footer font-small teal pt-4 color" id="colorFooter">
+
+  <!-- Footer Text -->
+  <div class="container-fluid text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mt-md-0 mt-3">
+
+        <!-- Content -->
+        <h5 class="text-uppercase font-weight-bold">About Us</h5>
+        <p>Promise is aimed to focused on providing support for reducing poverty</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none pb-3">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mb-md-0 mb-3">
+
+        <!-- Content -->
+        <h5 class="text-uppercase font-weight-bold">Contact Information</h5>
+      <ul>
+         <li> Malden, MA</li>
+        <li>JohnbelDev@gmail.com</li>
+      </ul>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Text -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Promise
+    <!-- <a href="https://mdbootstrap.com/"> MDBootstrap.com</a> -->
+  </div>
+  <!-- Copyright -->
+
+</footer>
+
+<script type="text/javascript" src="/viewScroll.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>

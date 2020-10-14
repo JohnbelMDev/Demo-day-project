@@ -2,12 +2,25 @@
 width: 40%!important;
 background: rgba(0,0,0,0.5);
 margin-left:30%;
+margin-top: 15%;
 }
 p{
   background: rgba(0,0,0,0.5);
 
 }
+footer{
+  margin-top: 42% !important;
+  color:white;
+}
+#colorFooter{
+  /* background: rgba(0,0,0,0.5)!important; */
+  background-color: #0C2340 !important;
 
+
+}
+li{
+  list-style: none;
+}
 body{
   background-image: url('https://www.usaid.gov/sites/default/files/styles/732_width/public/nodeimage/Nadia_Todres_Education.jpg?itok=dVZvKrfU');
    background-repeat: no-repeat;

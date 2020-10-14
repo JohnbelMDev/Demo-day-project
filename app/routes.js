@@ -85,12 +85,12 @@ res.redirect('/')
     var hourNow = today.getHours();
     var greeting;
     if (hourNow > 18) {
-      greeting = 'Good evening'
+      greeting = 'Good Evening'
     } else if (hourNow > 12) {
-      greeting = 'Good afternoon'
+      greeting = 'Good Afternoon'
 
     } else if (hourNow > 0) {
-      greeting = 'Good morning'
+      greeting = 'Good Morning'
     } else {
       greeting = 'Welcome';
     }
@@ -158,12 +158,12 @@ res.redirect('/')
     var hourNow = today.getHours();
     var greeting;
     if (hourNow > 18) {
-      greeting = 'Good evening'
+      greeting = 'Good Evening'
     } else if (hourNow > 12) {
-      greeting = 'Good afternoon'
+      greeting = 'Good Afternoon'
 
     } else if (hourNow > 0) {
-      greeting = 'Good morning'
+      greeting = 'Good Morning'
     } else {
       greeting = 'Welcome';
     }

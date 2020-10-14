@@ -49,6 +49,9 @@ body{
 .color{
   background-color: transparent !important;
 }
+li{
+  list-style: none;
+}
 
 header{
 
@@ -59,7 +62,7 @@ header{
  -moz-transition: all ease-out .5s;
  -o-transition: all ease-out .5s;
  transition: all ease-out .5s;
- background-image: url('https://www.digicelgroup.com/en/media/news/2018/march/21/digicel-fulfils-promise-to-haiti-with-175th-school/_jcr_content/content/two_columns_content/left-parsys/image_0.img.jpg/1552525893740.jpg');
+ background-image: url('http://localhost:8180/img/imgschool.jpg');
  background-repeat: no-repeat;
  /* background-size: auto; */
  background-size: cover;
