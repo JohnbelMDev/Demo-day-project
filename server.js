@@ -5,6 +5,7 @@
 // get all the tools we need
 var express  = require('express');
 var app      = express();
+var databaseUrl=''
 // process.env.PORT MEANS WHATEVER IS IN THE ENVIRONMENT VARIABLE
 // and right I need that for when I'm deploying otherwise it's a nono
 var port     = process.env.PORT || 8180 ;
@@ -26,9 +27,15 @@ var session      = require('express-session');
 var configDB = require('./config/database.js');
 
 var db
+if ((process.env.NODE_ENV || '').trim() !== 'production') {
+  databaseUrl = configDB.localUrl
+}
+else {
+  databaseUrl= configDB.url
 
+}
 // configuration ===============================================================
-mongoose.connect(configDB.url, (err, database) => {
+mongoose.connect(databaseUrl, (err, database) => {
   if (err) return console.log(err)
   db = database
   require('./app/routes.js')(app, passport, db);

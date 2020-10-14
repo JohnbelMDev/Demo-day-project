@@ -5,8 +5,12 @@ footer {
   background-color: #0C2340;
   color:white;
 }
-
-
+nav{
+  background-color: white;
+}
+.right{
+  margin: 0 0 0 12%;
+}
 
 /* .header {
 
@@ -97,6 +101,13 @@ h2{
 } */
 .test2{
   color: white;
+}
+.imgSchool{
+  height:35rem;
+}
+
+.left{
+  margin:0 15px 3px 2px;
 }
 
 .space{

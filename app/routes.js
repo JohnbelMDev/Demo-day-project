@@ -148,10 +148,12 @@ res.redirect('/')
     })
   })
 
+// app.get('/campaignprofileNavigation',(req,res)=>{
+//   res.redirect('/campaignprofile');
+// })
 
 
-
-  app.get('/campaignprofile', (req, res) => {
+  app.get('/campaignprofile', isLoggedIn,(req, res) => {
     var today = new Date();
     var hourNow = today.getHours();
     var greeting;
@@ -263,7 +265,7 @@ res.redirect('/')
                 customer: customer.id
               })
             )
-            .then(() => res.redirect('/'))
+            .then(() => res.redirect(`/viewdonation/${result}`))
             .catch(err => {console.log(err);
                 console.log(err);
             })

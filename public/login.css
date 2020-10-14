@@ -1,0 +1,55 @@
+
+
+body{
+
+  /* padding-top:80px; */
+  word-wrap:break-word;
+  background-color: white ;
+}
+.card2{
+  margin-right: 52%;
+}
+.form-group{
+  width: 40% !important
+}
+h1,p,a,span{
+  color: black;
+}
+h1{
+display: none;
+}
+label{
+  color:black;
+}
+a{
+  color: black;
+}
+img{
+  height: 200px;
+}
+h2{
+  text-align: center;
+}
+.test2{
+  color: black;
+}
+input{
+  display: block;
+}
+.card{
+  width: 100%;
+display: inline-block;
+margin-left: 56%
+}
+/* .col-sm-6{
+  display: none;
+} */
+.fund{
+  width: 90%;
+}
+.formInput{
+  margin-left: 50%;
+}
+.test{
+  background-image: url('https://www.pulitzer.org/cms/sites/default/files/styles/slider_large/public/2009haiti19.jpg')!important;
+}

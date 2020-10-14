@@ -11,7 +11,7 @@
 <header>
   <h2><%=greeting%></h2>
   <h2><%=answer[0].name%></h2>
-  <h2>My Raises</h2>
+  <h2>My Campaign</h2>
 </header>
     <a class="logout" href="/logout">Logout</a>
     <section class="topcontainer">
@@ -20,7 +20,7 @@
         <img src="img/hands.jpg" class="card-img-top" alt="...">
 
         <div class="card-body">
-          <a href="/campaignform"  class="btn btn-primary">Start a new fundraiser</a>
+          <a href="/campaignform"  class="btn btn-primary">Start a New Campaign</a>
         </div>
 
 
@@ -32,11 +32,11 @@
         <div class="card-body">
           <h3><%=answer[i].user%></h3>
           <h4><%=answer[i].description%></h4>
-          <h4>Amount Raise: <%=answer[i].currentGoal%>$</h4>
+          <h4>Amount Raised: <%=answer[i].currentGoal%>$</h4>
 
           <!-- <input type="hidden" name="result" value="<%=answer._id%>"> -->
 
-          <button  value="<%=answer[i]._id%>" id="card" class="btn btn-primary deleteButton">Delete Fundraiser</button>
+          <button  value="<%=answer[i]._id%>" id="card" class="btn btn-primary deleteButton">Delete Campaign</button>
         </div>
 
 

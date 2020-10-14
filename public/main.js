@@ -26,6 +26,14 @@ var deletebutton = document.getElementsByClassName('deleteButton')
 //       });
 // });
 
+
+
+
+
+
+
+
+
 Array.from(deletebutton).forEach(function(element) {
       element.addEventListener('click', function(){
         console.log(element.value);
