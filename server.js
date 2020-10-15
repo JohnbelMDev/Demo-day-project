@@ -27,15 +27,15 @@ var session      = require('express-session');
 var configDB = require('./config/database.js');
 
 var db
-// if ((process.env.NODE_ENV || '').trim() !== 'production') {
-//   databaseUrl = configDB.localUrl
-// }
-// else {
-//   databaseUrl= configDB.url
-//
-// }
+if ((process.env.NODE_ENV || '').trim() !== 'production') {
+  databaseUrl = configDB.localUrl
+}
+else {
+  databaseUrl= configDB.url
+
+}
 // configuration ===============================================================
-mongoose.connect(configDB.url, (err, database) => {
+mongoose.connect(databaseUrl, (err, database) => {
   if (err) return console.log(err)
   db = database
   require('./app/routes.js')(app, passport, db);
