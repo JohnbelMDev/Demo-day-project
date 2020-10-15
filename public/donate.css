@@ -7,7 +7,20 @@ h4{
   margin: 0 15% 2px 1px;
 
 }
-
+.line{
+  /* display: inline; */
+  padding: 0 0 0 5%;
+}
+.black{
+  color: black !important;
+}
+.text-white{
+  color:black !important;
+}
+.ElementsApp .ElementsApp .InputElement {
+    color:black !important;
+    /* color: #fff; */
+}
 body{
   /* background-color: gray; */
   /* background-image: url('https://149354000.v2.pressablecdn.com/wp-content/uploads/2020/04/photo-1553203938-5faaf546f1ad.jpeg'); */

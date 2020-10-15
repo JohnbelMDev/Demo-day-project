@@ -55,11 +55,12 @@
   </header>
   <!-- <form class="" action="donatenow" method="post"> -->
   <!-- <input type="number" name="" value="" placeholder="donate" required> -->
+  <section class="padding">
   <div class="group">
     <form action="/donatenow" method="post">
       <div class="form-group">
         <!-- <label for="formGroupExampleInput">Example label</label> -->
-        <input type="text" name="fullName" class="form-control" id="formGroupExampleInput" placeholder="Fullname">
+        <input type="text" name="fullName" class="form-control" id="formGroupExampleInput" placeholder="Full Name">
       </div>
       <div class="form-group">
         <!-- <label for="formGroupExampleInput2">Another label</label> -->
@@ -68,20 +69,20 @@
       <input type="hidden" name="result" value="<%=answer._id%>">
       <div class="form-group">
         <!-- <label for="formGroupExampleInput2">Another label</label> -->
-        <input type="number" name="phoneNumber" class="form-control" id="formGroupExampleInput2" placeholder="phone Number">
+        <input type="number" name="phoneNumber" class="form-control" id="formGroupExampleInput2" placeholder="Phone Number">
       </div>
 
 
 
       <div class="form-group">
         <!-- <label for="formGroupExampleInput2">Another label</label> -->
-        <input type="number" name="amount" class="form-control" id="formGroupExampleInput2" placeholder="money Amount">
+        <input type="number" name="amount" class="form-control" id="formGroupExampleInput2" placeholder="Money Amount">
       </div>
 
 
 
-      <div class="form-group">
-        <div id="card-element" class="bg-transparent text-white p-2 h-10 mb-4"></div>
+      <div class="form-group" id="black">
+        <div id="card-element" class="bg-transparent text-green p-2 h-10 mb-4 black" id="black"></div>
         <div id="card-errors" role="alert"></div>
 
       </div>
@@ -92,8 +93,10 @@
       <% items= answer.itemsTodonate.split(',') %>
 
       <% for(var i=0; i< items.length;i++){%>
+        <section class="line">
       <input type="checkbox" name="itemDonated" value="<%=items[i]%>">
-      <h2><%=items[i]%> </h2>
+      <span><%=items[i]%> </span>
+        <section>
       <%}%>
 <p>Please send all items to <%=answer.homeAddress%></p>
 
@@ -104,6 +107,7 @@
   </div>
   </form>
   <div class="group">
+    <section class="padding">
 
     <div>
 
