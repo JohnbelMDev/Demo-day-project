@@ -69,9 +69,25 @@
     </div> -->
 
 
+    <div class="card">
+      <div class="card-body">
+        <% for(var i=0; i< viewDonation.donation.length;i++){%>
+         <p class="list-group-item"><%=viewDonation.donation[i].fullName%></p>
+       <%  if(viewDonation.donation[i].itemDonated !==null){%>
+         <p class="list-group-item"><%=viewDonation.donation[i].itemDonated%></p>
+       <%  }%>
+
+         <p class="list-group-item"><%=viewDonation.donation[i].moneyAmount%></p>
 
 
-     <div class="card mb-3 card">
+        <%}%>
+
+        <p class="list-group-item">Amount Raised <%=viewDonation.currentGoal%> out of<span>  <%=viewDonation.amount%></span></p>
+
+      </div>
+    </div>
+
+     <!-- <div class="card mb-3 card">
 
      <% for(var i=0; i< viewDonation.donation.length;i++){%>
       <p class="list-group-item"><%=viewDonation.donation[i].fullName%></p>
@@ -86,10 +102,93 @@
 
      <p class="list-group-item">Amount Raised <%=viewDonation.currentGoal%> out of<span>  <%=viewDonation.amount%></span></p>
 
+</div> -->
+<section>
+  <h2></h2>
+</section>
+<!-- Card -->
+<div class="card testimonial-card" id="card2">
+
+  <!-- Background color -->
+  <div class="card-up indigo lighten-1"></div>
+
+  <!-- Avatar -->
+  <div class="avatar mx-auto white">
+    <img src="/img/will smith.jpg" class="rounded-circle imgdon"
+      alt="woman avatar">
+  </div>
+
+  <!-- Content -->
+  <div class="card-body">
+    <!-- Name -->
+    <h4 class="card-title">Joseph Guiristine</h4>
+    <hr>
+    <!-- Quotation -->
+    <p><i class="fas fa-quote-left"></i> Remember that the happiest people are not those getting more, but those giving more
+    </p>
+  </div>
+  <a href="/ " id="Margin" class="btn btn-outline-danger space text-center">Go Home</a>
+
+
 </div>
+<!-- Card -->
 
 
 
+<!-- Card -->
+<div class="card testimonial-card" id="card2">
+
+  <!-- Background color -->
+  <div class="card-up indigo lighten-1"></div>
+
+  <!-- Avatar -->
+  <div class="avatar mx-auto white">
+    <img src="/img/donationp.jpg" class="rounded-circle imgdon "
+      alt="woman avatar">
+  </div>
+
+  <!-- Content -->
+  <div class="card-body">
+    <!-- Name -->
+    <h4 class="card-title">Annah Bel</h4>
+    <hr>
+    <!-- Quotation -->
+    <p><i class="fas fa-quote-left"></i> When you give to others, you get way more than you ever imagined
+    </p>
+  </div>
+  <a href="/ " id="Margin" class="btn btn-outline-danger space text-center">Go Home</a>
+
+</div>
+<!-- Card -->
+
+
+
+
+<!-- Card -->
+<div class="card testimonial-card" id="card2">
+
+  <!-- Background color -->
+  <div class="card-up indigo lighten-1"></div>
+
+  <!-- Avatar -->
+  <div class="avatar mx-auto white">
+    <img id="imgdon"src="/img/donate1.JPG" class="rounded-circle imgdon"
+      alt="woman avatar">
+  </div>
+
+  <!-- Content -->
+  <div class="card-body">
+    <!-- Name -->
+    <h4 class="card-title">Anna Doe</h4>
+    <hr>
+    <!-- Quotation -->
+    <p><i class="fas fa-quote-left"></i>No one has ever become poor by giving.
+    </p>
+  </div>
+  <a href="/ " id="Margin" class="btn btn-outline-danger space text-center">Go Home</a>
+
+</div>
+<!-- Card -->
 
 <footer class="page-footer font-small teal pt-4 color" id="colorFooter">
 
