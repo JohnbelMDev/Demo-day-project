@@ -11,6 +11,9 @@ nav{
 .right{
   margin: 0 0 0 12%;
 }
+.goog-logo-link{
+  display: none;
+}
 
 /* .header {
 

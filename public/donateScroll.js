@@ -8,6 +8,8 @@
                 // if not at the top, set the navbar background to green
             } else {
                 the_nav.setAttribute('style', 'background-color:#0C2340 !important');
+                the_nav.setAttribute('style', 'color:white !important');
+
             }
             console.log(window.scrollY); // log out the Y coordinates of the location of the window scroll
         }

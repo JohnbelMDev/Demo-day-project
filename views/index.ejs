@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en-US">
 <head>
     <title>Promise</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -134,15 +134,15 @@
             <div class="card-body">
               <h5 class="card-title"><%=answer[i].title%></h5>
               <h5 class="card-title"></h5>
+              <p class="card-text black">Category: <%=answer[i].category%> </p>
               <p class="card-text black"><%=answer[i].name%> is organizing this fundraiser</p>
               <p class="card-text black">Email <%=answer[i].user%> for more info</p>
               <p class="card-text black">Help <%=answer[i].name%> Raise  $<%=answer[i].amount%></p>
               <p class="card-text black"><%=answer[i].date%></p>
               <!-- <p class="card-text"><%=answer[i].description%></p>
               <p class="card-text"><%=answer[i].description%></p> -->
-
+              <a href="/viewdonation/<%=answer[i]._id%> " id="Margin" class="btn btn-outline-danger space">View Campaign</a>
               <a href="/donationForm/<%=answer[i]._id%>" id="Margin" class="btn btn-outline-primary space">Donate</a>
-              <a href="/viewdonation/<%=answer[i]._id%> " id="Margin" class="btn btn-outline-danger space">View  Page Donation</a>
             </div>
           </div>
           <!-- <h4><%=answer[i].user%></h4>
@@ -205,13 +205,25 @@
   </div>
   <!-- Footer Text -->
 
+
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3">© 2020 Promise
     <!-- <a href="https://mdbootstrap.com/"> MDBootstrap.com</a> -->
   </div>
-  <!-- Copyright -->
 
+  
+  <!-- Copyright -->
+  <div id="google_translate_element"></div>
+
+  <script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+  }
+  </script>
+
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </footer>
+
 <!-- Footer -->
 <script type="text/javascript" src="/indexScroll.js">
 
@@ -219,5 +231,6 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
 </body>
 </html>

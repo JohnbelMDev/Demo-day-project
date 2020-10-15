@@ -43,7 +43,7 @@
         <h4 id="Welcome"><strong>Welcome To Promise, Where Giving One Is Raising One</strong></h4>
 
         <div class="form-inline my-2 my-lg-0">
-          <a href="/logout"><button class="btn btn-outline-danger my-2 my-sm-0 margin left">Logout</button></a>
+          <a href="/"><button class="btn btn-outline-danger my-2 my-sm-0 margin left">Home</button></a>
         </div>
       </div>
     </nav>
@@ -97,10 +97,38 @@
       <%}%>
 <p>Please send all items to <%=answer.homeAddress%></p>
 
-      <button type="submit">Submit</button>
+<section class="text-center ">
+    <button class="left01 btn btn-large bg-dark btn-dark mx-5"type="submit">Submit</button>
+</section>
 
   </div>
   </form>
+  <div class="group">
+
+    <div>
+
+        <section class="text-center">
+      <div class="card">
+        <img src="/<%=answer.imgPath%>" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><%=answer.title%></h5>
+          <h5 class="card-title"></h5>
+          <p class="card-text ">Category: <%=answer.category%> </p>
+          <p class="card-text "><%=answer.name%> is organizing this fundraiser</p>
+          <p class="card-text ">Email <%=answer.user%> for more info</p>
+          <p class="card-text ">Help <%=answer.name%> Raise  $<%=answer.amount%></p>
+          <p class="card-text "><%=answer.date%></p>
+
+          <a href="/viewdonation/<%=answer._id%> " id="Margin" class="btn btn-outline-danger space">View Campaign</a>
+        </div>
+      </div>
+    </section>
+
+
+    </div>
+
+
+  </div>
 
 
 
