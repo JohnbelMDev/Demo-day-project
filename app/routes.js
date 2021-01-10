@@ -2,12 +2,10 @@ const mongoose = require('mongoose');
 const fundModel = require('./models/fundModel');
 var ObjectId = require('mongodb').ObjectID;
 const multer = require('multer');
- // Add your Secret Key Here
- const key ='sk_test_51Ha6EUEsCFPlCMG1zxzWoFCMCkMdTEEnxmtsY54cDJ1ZCMebV8NwxX9V9IFrDojB0nhtXTdhk1EVVD1KDiUUPi9g00gVqMcbFl';
+// Add your Secret Key Here
+const key = 'sk_test_51Ha6EUEsCFPlCMG1zxzWoFCMCkMdTEEnxmtsY54cDJ1ZCMebV8NwxX9V9IFrDojB0nhtXTdhk1EVVD1KDiUUPi9g00gVqMcbFl';
 
- const stripe = require('stripe')(key);
-
-
+const stripe = require('stripe')(key);
 var storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, 'public/images/uploads')
@@ -28,16 +26,12 @@ var upload = multer({
 // Put---> for updating data
 // delete----> for deleting data
 /* app is an object*/
-
-
 //What the Submission endpoint contained
 // forms
 // title of the fundraisers
 // Description of the fundraiserr
 // How much they want to raise
 // Date of submission
-
-
 // Will grab the endpoint with a get handler
 module.exports = function(app, passport, multer, db) {
 
@@ -45,41 +39,21 @@ module.exports = function(app, passport, multer, db) {
   // gets are the functions
   // show the home page (will also have our login links) because it's rendering the homepages
   app.get('/', function(req, res) {
-    // db.collection('FundModel').find({}).toArray((err, result) => {
-    //   res.render('index.ejs', {
-    //     answer: result
-    //   });
-    //
-    // });
     fundModel.find({}, function(err, docs) {
-
       if (err) {} else {
-        // res.send(docs)
         res.render('index.ejs', {
           answer: docs
         });
       }
-
-
-
-
     });
-    // console.log(result)
-    // res.send("hello there")
+  });
+  app.get('/logout', (req, res) => {
+    req.logout();
+    res.redirect('/')
 
   });
-
-
-app.get('/logout', (req,res) =>{
-req.logout();
-res.redirect('/')
-
-});
-
-
   // PROFILE SECTION =========================
   // each route represent a section
-  // it's handling a req
   app.get('/myfundraiser', isLoggedIn, function(req, res) {
     var today = new Date();
     var hourNow = today.getHours();
@@ -136,24 +110,19 @@ res.redirect('/')
     var id = ObjectId(req.params.id);
     // console.log(id);
     fundModel.findOne({
-      _id: id
+        _id: id
 
-    },
-    // console.log();
-     (err, result) => {
-      console.log("hello", result);
-      res.render("viewdonation.ejs", {
-        viewDonation: result
-      });
-    })
+      },
+      // console.log();
+      (err, result) => {
+        console.log("hello", result);
+        res.render("viewdonation.ejs", {
+          viewDonation: result
+        });
+      })
   })
 
-// app.get('/campaignprofileNavigation',(req,res)=>{
-//   res.redirect('/campaignprofile');
-// })
-
-
-  app.get('/campaignprofile', isLoggedIn,(req, res) => {
+  app.get('/campaignprofile', isLoggedIn, (req, res) => {
     var today = new Date();
     var hourNow = today.getHours();
     var greeting;
@@ -172,25 +141,19 @@ res.redirect('/')
         user: req.user.local.email
       },
       (err, result) => {
-        // console.log(result);
-        // console.log("hello I am",result);
         res.render('campaignprofile.ejs', {
           answer: result,
-          greeting:greeting
+          greeting: greeting
         });
 
       });
-    // res.render("campaignprofile")
-
   })
 
   app.delete('/deleteDonation', (req, responce) => {
-    // console.log(req.body.id);
     db.collection('donation').findOneAndDelete({
       _id: new mongoose.mongo.ObjectID(req.body.id),
     }, (err, result) => {
       if (err) return console.log(err)
-      // console.log('saved to databassssse')
       responce.json({
         message: "succes"
       })
@@ -223,8 +186,6 @@ res.redirect('/')
     let moneyAmount = parseInt(req.body.amount);
     let result = req.body.result;
     let itemDonated = req.body.itemDonated;
-
-
     fundModel.findOneAndUpdate({
       _id: new mongoose.mongo.ObjectID(result)
     }, {
@@ -232,25 +193,25 @@ res.redirect('/')
         currentGoal: moneyAmount
       },
 
-        // add to an array
-        $addToSet: {
-          donation: {
-            fullName: fullName,
-            email: email,
-            phoneNumber: phoneNumber,
-            moneyAmount: moneyAmount,
-            itemDonated:itemDonated
-          }
+      // add to an array
+      $addToSet: {
+        donation: {
+          fullName: fullName,
+          email: email,
+          phoneNumber: phoneNumber,
+          moneyAmount: moneyAmount,
+          itemDonated: itemDonated
         }
+      }
 
-    },  {
+    }, {
       new: true
     }, function(err, response) {
       if (err) {
         res.redirect('/')
       } else {
         try {
-          console.log( req.body);
+          console.log(req.body);
           stripe.customers
             .create({
 
@@ -266,8 +227,9 @@ res.redirect('/')
               })
             )
             .then(() => res.redirect(`/viewdonation/${result}`))
-            .catch(err => {console.log(err);
-                console.log(err);
+            .catch(err => {
+              console.log(err);
+              console.log(err);
             })
         } catch (err) {
           res.send(err);
@@ -286,16 +248,7 @@ res.redirect('/')
     let num2 = req.body.num2
     let num3 = req.body.num3
     let num4 = req.body.num4
-
     res.redirect("/campaignprofile")
-    // res.send(num1 + "" + num2 + "" + num3 + "" + num4)
-    // res.send(num2)
-    // res.send(num3)
-    // res.send(num4)
-
-
-
-
   });
 
 
@@ -309,35 +262,22 @@ res.redirect('/')
     let itemsTodonate = req.body.itemsTodonate;
     let homeAddress = req.body.homeAddress;
     let name = req.body.name;
-
-
-    // let itemsTodonate = req.body.date;
-
-    // console.log(req.sessionID);
-
-    // console.log(req.user);
-    //test and it works
-    // db.collection('fundraiserForm').save({
-    //   //
-    //
-
-    // })
     // creating fund
     // passing field as a contructor
     // creating an object
     let fund = new fundModel({
       _id: new mongoose.Types.ObjectId(),
       user: email,
-      name:name,
+      name: name,
       imgPath: 'images/uploads/' + req.file.filename,
       amount: amount,
       currentGoal: 0,
       title: title,
       description: description,
       date: date,
-      itemsTodonate:itemsTodonate,
-      category:category,
-      homeAddress:homeAddress,
+      itemsTodonate: itemsTodonate,
+      category: category,
+      homeAddress: homeAddress,
       donation: []
 
     })
@@ -349,45 +289,13 @@ res.redirect('/')
   })
 
 
-   app.get("/completed", (req,res) =>{
-     res.render("completed.ejs")
-     // res.sed("yoyoyo")
-   })
-app.get('/test',(req,res) =>{
-  res.render('test.ejs')
-})
+  app.get("/completed", (req, res) => {
+    res.render("completed.ejs")
+  })
+  app.get('/test', (req, res) => {
+    res.render('test.ejs')
+  })
 
-// creating post charge
-//   app.post("/charge", (req, res) => {
-//   try {
-//     console.log( req.body);
-//     stripe.customers
-//       .create({
-//
-//         name: req.body.name,
-//         email: req.body.email,
-//         source: req.body.stripeToken
-//       })
-//       .then(customer =>
-//         stripe.charges.create({
-//           amount: req.body.amount * 100,
-//           currency: "usd",
-//           customer: customer.id
-//         })
-//       )
-//       .then(() => res.redirect('completed'))
-//       .catch(err => {console.log(err);
-//           console.log(err);
-//       })
-//   } catch (err) {
-//     res.send(err);
-//   }
-// });
-
-  // app.get()
-  // LOGOUT ==============================
-  // grabs the logout path
-  // get for getting data
   app.get('/logout', function(req, res) {
     // called on the functoin logout
     req.logout();
@@ -469,16 +377,16 @@ app.get('/test',(req,res) =>{
   // user account will stay active in case they want to reconnect in the future
 
   // local -----------------------------------
-      app.get('/unlink/local', isLoggedIn, function(req, res) {
-        // registering user for user
-          var fundRaiser            = req.fundRaiser;
-          fundRaiser.local.email    = undefined;
-          fundRaiser.local.password = undefined;
-          fundRaiser.local.name = undefined;
-          fundRaiser.save(function(err) {
-              res.redirect('/profile');
-          });
-      });
+  app.get('/unlink/local', isLoggedIn, function(req, res) {
+    // registering user for user
+    var fundRaiser = req.fundRaiser;
+    fundRaiser.local.email = undefined;
+    fundRaiser.local.password = undefined;
+    fundRaiser.local.name = undefined;
+    fundRaiser.save(function(err) {
+      res.redirect('/profile');
+    });
+  });
   //
 };
 

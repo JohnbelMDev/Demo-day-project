@@ -11,190 +11,151 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
   <!-- Material Design Bootstrap -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
-  <!-- <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> -->
   <link rel="stylesheet" href="/donate.css">
 </head>
 
 <body>
-
-
   <header>
-
     <!--Main Navigation-->
-
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark indigo " id="navbar">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <!-- <li class="nav-item active">
-                      <a class="nav-link testColor" href="#">Home <span class="sr-only">(current)</span></a>
-                  </li> -->
           <li class="nav-item">
           </li>
-          <!-- <li class="nav-item">
-                    <a class="nav-link active" href="/login">Login</a>
-                  </li> -->
         </ul>
         <h4 id="Welcome"><strong>Welcome To Promise, Where Giving One Is Raising One</strong></h4>
-
         <div class="form-inline my-2 my-lg-0">
           <a href="/"><button class="btn btn-outline-danger my-2 my-sm-0 margin left">Home</button></a>
         </div>
       </div>
     </nav>
-    <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-     <a href="/login"><button class="btn btn-outline-danger my-2 my-sm-0 margin" >Login</button></a>
-     <a href="/signup">  <button class="btn btn-outline-primary my-2 my-sm-0 margin">Signup</button> -->
     <section class="Welcome">
     </section>
   </header>
-  <!-- <form class="" action="donatenow" method="post"> -->
-  <!-- <input type="number" name="" value="" placeholder="donate" required> -->
   <section class="padding">
-  <div class="group">
-    <form action="/donatenow" method="post">
-      <div class="form-group">
-        <!-- <label for="formGroupExampleInput">Example label</label> -->
-        <input type="text" name="fullName" class="form-control" id="formGroupExampleInput" placeholder="Full Name">
-      </div>
-      <div class="form-group">
-        <!-- <label for="formGroupExampleInput2">Another label</label> -->
-        <input type="email" name="email" class="form-control" id="formGroupExampleInput2" placeholder="Email">
-      </div>
-      <input type="hidden" name="result" value="<%=answer._id%>">
-      <div class="form-group">
-        <!-- <label for="formGroupExampleInput2">Another label</label> -->
-        <input type="number" name="phoneNumber" class="form-control" id="formGroupExampleInput2" placeholder="Phone Number">
-      </div>
-
-
-
-      <div class="form-group">
-        <!-- <label for="formGroupExampleInput2">Another label</label> -->
-        <input type="number" name="amount" class="form-control" id="formGroupExampleInput2" placeholder="Money Amount">
-      </div>
-
-
-
-      <div class="form-group" id="black">
-        <div id="card-element" class="bg-transparent text-green p-2 h-10 mb-4 black" id="black"></div>
-        <div id="card-errors" role="alert"></div>
-
-      </div>
-
-
-
-
-      <% items= answer.itemsTodonate.split(',') %>
-
-      <% for(var i=0; i< items.length;i++){%>
-        <section class="line">
-      <input type="checkbox" name="itemDonated" value="<%=items[i]%>">
-      <span><%=items[i]%> </span>
-        <section>
-      <%}%>
-<p>Please send all items to <%=answer.homeAddress%></p>
-
-<section class="text-center ">
-    <button class="left01 btn btn-large bg-dark btn-dark mx-5"type="submit">Submit</button>
-</section>
-
-  </div>
-  </form>
-  <div class="group">
-    <section class="padding">
-
-    <div>
-
-        <section class="text-center">
-      <div class="card">
-        <img src="/<%=answer.imgPath%>" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title"><%=answer.title%></h5>
-          <h5 class="card-title"></h5>
-          <p class="card-text ">Category: <%=answer.category%> </p>
-          <p class="card-text "><%=answer.name%> is organizing this fundraiser</p>
-          <p class="card-text ">Email <%=answer.user%> for more info</p>
-          <p class="card-text ">Help <%=answer.name%> Raise  $<%=answer.amount%></p>
-          <p class="card-text "><%=answer.date%></p>
-
-          <a href="/viewdonation/<%=answer._id%> " id="Margin" class="btn btn-outline-danger space">View Campaign</a>
+    <div class="group">
+      <form action="/donatenow" method="post">
+        <div class="form-group">
+          <input type="text" name="fullName" class="form-control" id="formGroupExampleInput" placeholder="Full Name">
         </div>
-      </div>
-    </section>
-
-
-    </div>
-
-
-  </div>
-
-
-
-
-  <!-- Stripe forms -->
-
-  <footer class="page-footer font-small teal pt-4 " id="colorFooter">
-
-    <!-- Footer Text -->
-    <div class="container-fluid text-center text-md-left" >
-
-      <!-- Grid row -->
-      <div class="row">
-
-        <!-- Grid column -->
-        <div class="col-md-6 mt-md-0 mt-3">
-
-          <!-- Content -->
-          <h5 class="text-uppercase font-weight-bold">About Us</h5>
-          <p>Promise is aimed to focused on providing support for reducing poverty</p>
-
+        <div class="form-group">
+          <input type="email" name="email" class="form-control" id="formGroupExampleInput2" placeholder="Email">
         </div>
-        <!-- Grid column -->
-
-        <hr class="clearfix w-100 d-md-none pb-3">
-
-        <!-- Grid column -->
-        <div class="col-md-6 mb-md-0 mb-3">
-
-          <!-- Content -->
-          <h5 class="text-uppercase font-weight-bold">Contact Information</h5>
-        <ul>
-           <li> Malden, MA</li>
-          <li>JohnbelDev@gmail.com</li>
-        </ul>
-
+        <input type="hidden" name="result" value="<%=answer._id%>">
+        <div class="form-group">
+          <input type="number" name="phoneNumber" class="form-control" id="formGroupExampleInput2" placeholder="Phone Number">
         </div>
-        <!-- Grid column -->
+        <div class="form-group">
+          <input type="number" name="amount" class="form-control" id="formGroupExampleInput2" placeholder="Money Amount">
+        </div>
+        <div class="form-group" id="black">
+          <div id="card-element" class="bg-transparent text-green p-2 h-10 mb-4 black" id="black"></div>
+          <div id="card-errors" role="alert"></div>
+        </div>
 
-      </div>
-      <!-- Grid row -->
 
-    </div>
-    <!-- Footer Text -->
 
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2020 Promise
-      <!-- <a href="https://mdbootstrap.com/"> MDBootstrap.com</a> -->
-    </div>
-    <!-- Copyright -->
 
-  </footer>
+        <% items= answer.itemsTodonate.split(',') %>
 
-  <script src="https://js.stripe.com/v3/"></script>
-  <script src="/card.js"></script>
-<script type="text/javascript" src="/donateScroll.js">
+        <% for(var i=0; i< items.length;i++){%>
+          <section class="line">
+            <input type="checkbox" name="itemDonated" value="<%=items[i]%>">
+            <span><%=items[i]%> </span>
+            <section>
+              <%}%>
+              <p>Please send all items to <%=answer.homeAddress%></p>
 
-</script>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-  </body>
-</body>
+              <section class="text-center ">
+                <button class="left01 btn btn-large bg-dark btn-dark mx-5" type="submit">Submit</button>
+              </section>
 
-</html>
+            </div>
+          </form>
+          <div class="group">
+            <section class="padding">
+
+              <div>
+
+                <section class="text-center">
+                  <div class="card">
+                    <img src="/<%=answer.imgPath%>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title"><%=answer.title%></h5>
+                      <h5 class="card-title"></h5>
+                      <p class="card-text ">Category: <%=answer.category%> </p>
+                      <p class="card-text "><%=answer.name%> is organizing this fundraiser</p>
+                      <p class="card-text ">Email <%=answer.user%> for more info</p>
+                      <p class="card-text ">Help <%=answer.name%> Raise $<%=answer.amount%></p>
+                      <p class="card-text "><%=answer.date%></p>
+
+                      <a href="/viewdonation/<%=answer._id%> " id="Margin" class="btn btn-outline-danger space">View Campaign</a>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+            <!-- Stripe forms -->
+
+            <footer class="page-footer font-small teal pt-4 " id="colorFooter">
+
+              <!-- Footer Text -->
+              <div class="container-fluid text-center text-md-left">
+
+                <!-- Grid row -->
+                <div class="row">
+
+                  <!-- Grid column -->
+                  <div class="col-md-6 mt-md-0 mt-3">
+
+                    <!-- Content -->
+                    <h5 class="text-uppercase font-weight-bold">About Us</h5>
+                    <p>Promise is aimed to focused on providing support for reducing poverty</p>
+
+                  </div>
+                  <!-- Grid column -->
+
+                  <hr class="clearfix w-100 d-md-none pb-3">
+
+                  <!-- Grid column -->
+                  <div class="col-md-6 mb-md-0 mb-3">
+
+                    <!-- Content -->
+                    <h5 class="text-uppercase font-weight-bold">Contact Information</h5>
+                    <ul>
+                      <li> Malden, MA</li>
+                      <li>JohnbelDev@gmail.com</li>
+                    </ul>
+
+                  </div>
+                  <!-- Grid column -->
+
+                </div>
+                <!-- Grid row -->
+
+              </div>
+              <!-- Footer Text -->
+
+              <!-- Copyright -->
+              <div class="footer-copyright text-center py-3">© 2020 Promise
+                <!-- <a href="https://mdbootstrap.com/"> MDBootstrap.com</a> -->
+              </div>
+              <!-- Copyright -->
+
+            </footer>
+
+            <script src="https://js.stripe.com/v3/"></script>
+            <script src="/card.js"></script>
+            <script type="text/javascript" src="/donateScroll.js">
+
+            </script>
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+          </body>
+        </body>
+
+        </html>

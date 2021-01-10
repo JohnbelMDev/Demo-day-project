@@ -1,151 +1,88 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="campaignprofile.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="campaignprofile.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
 
+<body>
   <header>
-
     <!--Main Navigation-->
 
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark indigo "  id="navbar">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark indigo " id="navbar">
       <h3 id="greeting"><%=greeting%></h3>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <!-- <li class="nav-item active">
-                    <a class="nav-link testColor" href="#">Home <span class="sr-only">(current)</span></a>
-                </li> -->
-                <li class="nav-item">
-                                 </li>
-                <!-- <li class="nav-item">
-                  <a class="nav-link active" href="/login">Login</a>
-                </li> -->
-            </ul>
-            <div class="form-inline my-2 my-lg-0">
-              <a href="/logout"><button class="btn btn-outline-danger my-2 my-sm-0 margin left" >Logout</button></a>
-              <a href="/"><button class="btn btn-outline-danger my-2 my-sm-0 margin left" >Home</button></a>
-
-    </div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+          </li>
+        </ul>
+        <div class="form-inline my-2 my-lg-0">
+          <a href="/logout"><button class="btn btn-outline-danger my-2 my-sm-0 margin left">Logout</button></a>
+          <a href="/"><button class="btn btn-outline-danger my-2 my-sm-0 margin left">Home</button></a>
         </div>
+      </div>
     </nav>
-      <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-   <a href="/login"><button class="btn btn-outline-danger my-2 my-sm-0 margin" >Login</button></a>
-   <a href="/signup">  <button class="btn btn-outline-primary my-2 my-sm-0 margin">Signup</button> -->
-   <section class="Welcome">
-   <h4 class="card-title"><strong>Welcome To Promise, Where Giving One Is Raising One</strong></h4>
- </section>
- </header>
-   <section class="topcontainer">
+    <section class="Welcome">
+      <h4 class="card-title"><strong>Welcome To Promise, Where Giving One Is Raising One</strong></h4>
+    </section>
+  </header>
+  <section class="topcontainer">
 
-     <section class="child">
-       <% for(var i=0;i<answer.length;i++){ %>
-         <div  class="test">
-         <img src="img/img02.jpg" class="card-img-top" alt="...">
+    <section class="child">
+      <% for(var i=0;i<answer.length;i++){ %>
+      <div class="test">
+        <img src="img/img02.jpg" class="card-img-top" alt="...">
 
-         <div class="card-body">
-           <h3><%=answer[i].user%></h3>
-           <h4><%=answer[i].description%></h4>
-           <h4>Amount Raised: <%=answer[i].currentGoal%>$</h4>
-
-           <!-- <input type="hidden" name="result" value="<%=answer._id%>"> -->
-
-           <button  value="<%=answer[i]._id%>" id="card" class="btn btn-primary hover deleteButton">Delete Campaign</button>
-           <a href="/campaignform"  class="btn btn-outline-success my-2 my-sm-0 margin left">Start a New Campaign</a>
-
-         </div>
-
-
-       </div>
-
-       <%}%>
+        <div class="card-body">
+          <h3><%=answer[i].user%></h3>
+          <h4><%=answer[i].description%></h4>
+          <h4>Amount Raised: <%=answer[i].currentGoal%>$</h4>
+          <button value="<%=answer[i]._id%>" id="card" class="btn btn-primary hover deleteButton">Delete Campaign</button>
+          <a href="/campaignform" class="btn btn-outline-success my-2 my-sm-0 margin left">Start a New Campaign</a>
+        </div>
+      </div>
+      <%}%>
        <div  class="test">
        <img class="imageFund" src="img/funraiser.png" class="card-img-top" alt="...">
        <div class="card-body">
-         <!-- <input type="hidden" name="result" value="<%=answer._id%>"> -->
          <a href="/campaignform"  class="btn btn-outline-success my-2 my-sm-0 margin left">Start a New Campaign</a>
-
        </div>
-
-
      </div>
    </section>
 
    </section>
    <br>
-   <!-- Card -->
-   <!-- <div class="card card-cascade wider reverse"> -->
-
-     <!-- Card image -->
-     <!-- <div class="view view-cascade overlay">
-       <img class="card-img-top imgSection" src="img/img8.jpg"
-         alt="Card image cap">
-       <a href="#!">
-         <div class="mask rgba-white-slight"></div>
-       </a>
-     </div> -->
-
-     <!-- Card content -->
-     <!-- <div class="card-body card-body-cascade text-center"> -->
-
-       <!-- Title -->
-       <!-- <h4 class="card-title"><strong>Welcome To Promise, Where Giving One is Raising One</strong></h4> -->
-       <!-- Subtitle -->
-       <!-- <h6 class="font-weight-bold indigo-text py-2">Down Below You Will Find A List Of Your Campaigns</h6> -->
-       <!-- Text -->
-       <!-- <p class="card-text"> -->
-       <!-- </p> -->
-
-       <!-- Linkedin -->
-
-     <!-- </div> -->
-
-   <!-- </div> -->
-   <!-- Card -->
-
 <footer class="page-footer font-small teal pt-4 " id="colorFooter">
-
   <!-- Footer Text -->
   <div class="container-fluid text-center text-md-left">
-
-    <!-- Grid row -->
+  <!-- Grid row -->
     <div class="row">
-
       <!-- Grid column -->
       <div class="col-md-6 mt-md-0 mt-3">
-
         <!-- Content -->
         <h5 class="text-uppercase font-weight-bold">About Us</h5>
         <p>Promise is aimed to focused on providing support for reducing poverty</p>
-
-      </div>
+       </div>
       <!-- Grid column -->
-
       <hr class="clearfix w-100 d-md-none pb-3">
-
       <!-- Grid column -->
       <div class="col-md-6 mb-md-0 mb-3">
-
         <!-- Content -->
         <h5 class="text-uppercase font-weight-bold">Contact Information</h5>
       <ul>
          <li> Malden, MA</li>
         <li>JohnbelDev@gmail.com</li>
       </ul>
-
       </div>
       <!-- Grid column -->
-
     </div>
     <!-- Grid row -->
-
   </div>
   <!-- Footer Text -->
 
@@ -154,17 +91,11 @@
     <!-- <a href="https://mdbootstrap.com/"> MDBootstrap.com</a> -->
   </div>
   <!-- Copyright -->
-
 </footer>
-
     <!-- <a class="logout" href="/logout">Logout</a> -->
-
     <script type="text/javascript" src="/campaignProfileScroll.js">
-
     </script>
     <script type="text/javascript" src="/main.js">
-
     </script>
-
   </body>
 </html>
