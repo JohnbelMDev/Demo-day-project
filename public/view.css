@@ -1,40 +1,63 @@
+
 .card{
-width: 40%!important;
-/* background: rgba(0,0,0,0.5); */
-margin-left:30%;
-display:inline-block;
-margin-top: 15%;
-box-shadow: 12px 34px 98px 12px rgba(0, 0, 0, 0.2), 0 16px 20px 0 rgba(1, 11, 22, 3.99);
-/* background-color: red; */
+  display: inline-block;
+  margin-left: 20%;
+  margin-top: 17%;
 }
-.imgdon{
-  width: 90%;
-  height: 18rem;
+#cardsDonation{
+  margin-top: 5%;
+  margin-left: 5%;
 }
-#card2{
-  width: 28%!important;
-      /* background: rgba(0,0,0,0.5); */
-      margin-left: 4%;
-      display: inline-block;
-      margin-top: 18%;
-      box-shadow: 12px 34px 98px 12px rgba(0, 0, 0, 0.2), 0 16px 20px 0 rgb(1 11 22);
+#thankYou{
+  margin-bottom: 10%;
+  text-align: center;
+  /* margin-left: 24%; */
+}
+#lorem{
+  margin-top: -9%;
+}
+.list-group-item{
+  border: none;
+}
+hr{
+  background-color: rgb(211,211,211);
 }
 
-footer{
-  margin-top: 42% !important;
-  color:white;
+.imgdon {
+  width: 100%;
+  height: 20rem;
 }
-#colorFooter{
+#center{
+  text-align: center !important;
+}
+#card2 {
+  width: 28% !important;
+  margin-left: 4%;
+  display: inline-block !important;;
+  margin-top: 18%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
+#colorFooter {
   /* background: rgba(0,0,0,0.5)!important; */
   background-color: #0C2340 !important;
-
-
 }
-li{
+
+li {
   list-style: none;
 }
-body{
+.container{
+  margin-top: 25%;
+}
+
+body {
   /* background-image: url('https://www.usaid.gov/sites/default/files/styles/732_width/public/nodeimage/Nadia_Todres_Education.jpg?itok=dVZvKrfU'); */
-   background-repeat: no-repeat;
-   background-size: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+footer {
+  margin-top: 2% !important;
+  color: white;
 }

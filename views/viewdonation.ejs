@@ -19,8 +19,7 @@
   <header>
     <!--Main Navigation-->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark indigo " id="navbar">
-      <h1>Thank You For Donating To <%=viewDonation.name%> Campaign</h1>
-      <!-- <a class="navbar-brand right" href="#"><strong>Navbar</strong></a> -->
+      <h1 id="h1">Promise</h1>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -30,91 +29,161 @@
           </li>
         </ul>
         <div class="form-inline my-2 my-lg-0">
+
           <a href="/"><button class="btn btn-outline-danger my-2 my-sm-0 margin left">Home</button></a>
           <a href="/signup"> <button class="btn btn-outline-primary my-2 my-sm-0 margin left">Signup</button></a>
         </div>
       </div>
     </nav>
+    <h2  id="thankYou">Thank You For Donating To <%=viewDonation.name%>Campaign</h2>
+
   </header>
-  <div class="card">
-    <div class="card-body">
+  <h1 id="thankYou">Thank You For Donating To <%=viewDonation.name%>'s Campaign</h1>
+  <hr>
+
+
+  <div class="container" id="lorem">
+    <!-- <p>Thank You For Donating To <%=viewDonation.name%> Campaign</p> -->
+
+    <div class="row align-items-stretch justify-content-start card-deck">
+     <div class="card">
+       <div class="card-body">
+        <div class="card-text">
+          <h2> Volder Yong </h2>
+We can define poverty as the condition where the basic needs of a family, like food, shelter, clothing, and education are not fulfilled. It can lead to other problems like poor literacy, unemployment, malnutrition, etc. A poor person is not able to get education due to lack of money and therefore remains unemployed. An unemployed person is not able to buy enough & nutritious food for his family and their health decline. A weak person lacks the energy required for the job. A  jobless person remains poor only. Thus we can say that poverty is the root cause of other problems
+        </div>
+       </div>
+     </div>
+     <div class="card">
+       <div class="card-body">
+        <div class="card-text">
+          <h2> Saint Louis </h2>
+According to the Noble prize winner South African leader, Nelson Mandela – “Poverty is not natural, it is manmade”. The above statement is true as the causes of poverty are generally man-made. There are various causes of poverty but the most important is population. Rising population is putting the burden on the resources & budget of countries. Governments are finding difficult to provide food, shelter & employment to the rising population.</div>
+       </div>
+     </div>
+
+     <div class="card">
+       <div class="card-body">
+        <div class="card-text">
+          <h2> Wang li</h2>
+           Whoever oppresses the poor shows contempt for their Maker, but whoever is kind to the needy honors God. — Proverbs 14:31, NIV
+        </div>
+       </div>
+     </div>
+
+
+    </div>
+  </div>
+
+
+  <div class="container" id="lorem">
+    <div class="row align-items-stretch justify-content-start card-deck">
+     <div class="card">
+       <div class="card-body">
+        <div class="card-text">
+        <h2> Yuju Hong </h2>
+          I am from the province, my parents are poor rice farmers. We experienced obstacles. As our income was low, our parents could not afford to send us to secondary school and these things prevented us to go where we wanted to go. For me what defines poverty is having the ability but lacking the opportunity.
+
+          When I finished primary school I moved to Bangkok, to look for a job, knowledge and experience. I had a goal in life and wanted to have what the others have : I want to have an education, I want to have opportunities. I did everything to get money in order to go to school. If I was hired to wash the dishes, to cook food, I would take the job, so that I could access education like other people and improve my life
+        </div>
+       </div>
+     </div>
+     <div class="card">
+       <div class="card-body">
+        <div class="card-text">
+          <h2> Frank Isa</h2>
+          In Nigeria, the Pandemic has overturned the little gains achieved.  We reverted from “teaching a man to fish” to “giving a man fish”. With the long months of lockdown, the number of the extreme poor and vulnerable increased.  With Nigeria being number one in the global poverty index, the pandemic made things worse.
+
+        Poverty and Gender-based violence proved a big challenge  The pandemic saw an astronomical rise in violence against women and girls, Thus an association was formed  “Association Against Child and Gender Based Violence”  (AACSGBV). </div>
+       </div>
+     </div>
+     <div class="card">
+       <div class="card-body">
+        <div class="card-text">
+          <h2> Jack Paul </h2>
+    Rather than investing traditional capital, we invest philanthropic, or “patient,” capital that provides startups with the flexibility and security to grow their business and reach as many poor customers as possible
+        </div>
+       </div>
+     </div>
+
+
+    </div>
+  </div>
+
+
+
+
+
+    <div class="container" id="cardsDonation">
+        <div class="row">
+          <% for(var i=0; i< viewDonation.donation.length;i++){%>
+            <div class="col-md-4">
+              <div class="card" style="width: 19rem;">
+                <img src="/img/Thank.png" class="square-circle imgdon" alt="woman avatar">
+                <div class="card-body">
+                  <p class="list-group-item"><%=viewDonation.donation[i].fullName%></p>
+                  <p class="list-group-item"><%=viewDonation.donation[i].moneyAmount%></p>                  <h5 class="card-title"></h5>
+                  <%  if(viewDonation.donation[i].itemDonated !==null){%>
+                    <p class="list-group-item"><%=viewDonation.donation[i].itemDonated%></p>
+                    <%  }%>
+                  <p class="list-group-item">Amount Raised <%=viewDonation.currentGoal%> out of<span> <%=viewDonation.amount%></span></p>
+                  <a href="/donationForm/<%=viewDonation._id%>" id="Margin" id="center" class="btn btn-outline-primary text-center">Donate</a>
+                </div>
+              </div>
+            </div>
+            <%}%>
+          </div>
+      </div>
+
+
+
+
+
+  <!-- <div class="card2">
+    <div class="card testimonial-card" id="card2">
       <% for(var i=0; i< viewDonation.donation.length;i++){%>
-        <p class="list-group-item"><%=viewDonation.donation[i].fullName%></p>
+          <div class="avatar mx-auto white">
+            <img src="/img/yale.jpg" class="square-circle imgdon" alt="woman avatar">
+          </div>
+            <p class="list-group-item"><%=viewDonation.donation[i].fullName%></p>
+            <p class="list-group-item"><%=viewDonation.donation[i].moneyAmount%></p>
         <%  if(viewDonation.donation[i].itemDonated !==null){%>
           <p class="list-group-item"><%=viewDonation.donation[i].itemDonated%></p>
           <%  }%>
-
-          <p class="list-group-item"><%=viewDonation.donation[i].moneyAmount%></p>
-
-
+          <p class="list-group-item">Amount <%=viewDonation.donation[i].moneyAmount%></p>
           <%}%>
-
           <p class="list-group-item">Amount Raised <%=viewDonation.currentGoal%> out of<span> <%=viewDonation.amount%></span></p>
+          <a href="/donationForm/<%=viewDonation._id%>" id="Margin" class="btn btn-outline-primary space">Donate</a>
 
-        </div>
+          </div>
       </div>
-      <section>
+      </div>
+      </div> -->
+      <!-- <section>
         <h2></h2>
-      </section>
+      </section> -->
       <!-- Card -->
-      <div class="card testimonial-card" id="card2">
-        <!-- Background color -->
-        <div class="card-up indigo lighten-1"></div>
+
+      <!-- Card -->
+      <!-- Card -->
+      <!-- <div class="card testimonial-card" id="card2">
+         Background color -->
+        <!-- <div class="card-up indigo lighten-1"></div> -->
         <!-- Avatar -->
-        <div class="avatar mx-auto white">
-          <img src="/img/will smith.jpg" class="rounded-circle imgdon" alt="woman avatar">
-        </div>
+        <!-- <div class="avatar mx-auto white">
+          <img id="imgdon" src="/img/donate1.JPG" class="square-circle imgdon" alt="woman avatar">
+        </div> -->
         <!-- Content -->
-        <div class="card-body">
+        <!-- <div class="card-body"> -->
           <!-- Name -->
-          <h4 class="card-title">Joseph Guiristine</h4>
-          <hr>
+          <!-- <h4 class="card-title">Anna Doe</h4>
+          <hr> -->
           <!-- Quotation -->
-          <p><i class="fas fa-quote-left"></i> Remember that the happiest people are not those getting more, but those giving more
+          <!-- <p><i class="fas fa-quote-left"></i>No one has ever become poor by giving.
           </p>
-        </div>
-        <a href="/ " id="Margin" class="btn btn-outline-danger space text-center">Go Home</a>
-      </div>
-      <!-- Card -->
-      <!-- Card -->
-      <div class="card testimonial-card" id="card2">
-        <!-- Background color -->
-        <div class="card-up indigo lighten-1"></div>
-        <!-- Avatar -->
-        <div class="avatar mx-auto white">
-          <img src="/img/donationp.jpg" class="rounded-circle imgdon " alt="woman avatar">
-        </div>
-        <!-- Content -->
-        <div class="card-body">
-          <!-- Name -->
-          <h4 class="card-title">Annah Bel</h4>
-          <hr>
-          <!-- Quotation -->
-          <p><i class="fas fa-quote-left"></i> When you give to others, you get way more than you ever imagined
-          </p>
-        </div>
-        <a href="/ " id="Margin" class="btn btn-outline-danger space text-center">Go Home</a>
-      </div>
-      <!-- Card -->
-      <!-- Card -->
-      <div class="card testimonial-card" id="card2">
-        <!-- Background color -->
-        <div class="card-up indigo lighten-1"></div>
-        <!-- Avatar -->
-        <div class="avatar mx-auto white">
-          <img id="imgdon" src="/img/donate1.JPG" class="rounded-circle imgdon" alt="woman avatar">
-        </div>
-        <!-- Content -->
-        <div class="card-body">
-          <!-- Name -->
-          <h4 class="card-title">Anna Doe</h4>
-          <hr>
-          <!-- Quotation -->
-          <p><i class="fas fa-quote-left"></i>No one has ever become poor by giving.
-          </p>
-        </div>
-        <a href="/ " id="Margin" class="btn btn-outline-danger space text-center">Go Home</a>
-      </div>
+        </div> -->
+        <!-- <a href="/ " id="Margin" class="btn btn-outline-danger space text-center">Go Home</a> -->
+      <!-- </div> -->
       <!-- Card -->
       <footer class="page-footer font-small teal pt-4 color" id="colorFooter">
         <!-- Footer Text -->
